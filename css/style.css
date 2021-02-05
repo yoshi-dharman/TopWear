@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-footer-background {
+  background-color: #ebe7c4 !important;
+}
+
+.text-color-inside {
+  color: #936a45 !important;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+$primary-color: rgb(235,231,196) !important;
+$secondary-color: rgb(147,106,69) !important;
+
+$font-montserrat: 'Montserrat', sans-serif;
+
+.montserrat {
+  font-family: $font-montserrat;
+}
+
+.navbar-footer-background {
+  background-color: $primary-color;
+}
+
+.text-color-inside {
+  color:$secondary-color;
+}

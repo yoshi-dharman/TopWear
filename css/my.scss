@@ -1,5 +1,5 @@
-$primary-color: rgb(235,231,196);
-$secondary-color: rgb(147,106,69);
+$primary-color: rgb(235,231,196) !important;
+$secondary-color: rgb(147,106,69) !important;
 
 .c-main{
     color : $primary-color;
@@ -23,4 +23,9 @@ $secondary-color: rgb(147,106,69);
 
 .bg-c-white{
     background-color: whitesmoke;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+
 }

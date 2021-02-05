@@ -1,17 +1,17 @@
 .c-main {
-  color: #ebe7c4;
+  color: #ebe7c4 !important;
 }
 
 .bg-c-main {
-  background-color: #ebe7c4;
+  background-color: #ebe7c4 !important;
 }
 
 .c-secondary {
-  color: #936a45;
+  color: #936a45 !important;
 }
 
 .bg-c-secondary {
-  background-color: #936a45;
+  background-color: #936a45 !important;
 }
 
 .c-white {
@@ -20,5 +20,9 @@
 
 .bg-c-white {
   background-color: whitesmoke;
+}
+
+.text-decoration-none {
+  text-decoration: none;
 }
 /*# sourceMappingURL=my.css.map */

@@ -1,0 +1,26 @@
+$primary-color: rgb(235,231,196);
+$secondary-color: rgb(147,106,69);
+
+.c-main{
+    color : $primary-color;
+}
+
+.bg-c-main{
+    background-color: $primary-color;
+}
+
+.c-secondary{
+    color: $secondary-color;
+}
+
+.bg-c-secondary{
+    background-color: $secondary-color;
+}
+
+.c-white{
+    color: whitesmoke;
+}
+
+.bg-c-white{
+    background-color: whitesmoke;
+}

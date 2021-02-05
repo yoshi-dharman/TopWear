@@ -3,7 +3,7 @@ $secondary-color: rgb(147,106,69) !important;
 
 $font-montserrat: 'Montserrat', sans-serif;
 
-.montserrat {
+body {
   font-family: $font-montserrat;
 }
 
@@ -14,3 +14,50 @@ $font-montserrat: 'Montserrat', sans-serif;
 .text-color-inside {
   color:$secondary-color;
 }
+
+.catalog {
+  width: 456px;
+  height: 280px;
+
+}
+
+.catalog-big {
+  width: 800px;
+  height: 560px;
+}
+
+.catalog {
+  width: 65%;
+  height: 280px;
+}
+
+.catalog-big {
+  width: 100%;
+  height: 559px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-fluid {
+  height: 200px;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-top: 2.5rem;
+}
+
+.icons {
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+  }
+}
+
+

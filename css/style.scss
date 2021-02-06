@@ -15,29 +15,18 @@ body {
   color:$secondary-color;
 }
 
-.catalog {
-  width: 456px;
-  height: 280px;
-
-}
-
 .catalog-big {
   width: 800px;
   height: 560px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .catalog {
   width: 65%;
   height: 280px;
-}
-
-.catalog-big {
-  width: 100%;
-  height: 559px;
-
-  img {
-    width: 100%;
-  }
 }
 
 .column {
@@ -50,6 +39,8 @@ body {
   padding-left: 4.5rem;
   padding-right: 4.5rem;
   padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .icons {
@@ -57,6 +48,50 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 1rem;
+  }
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+.title-category {
+  margin-top: -5rem;
+  margin-left: 1rem;
+}
+
+@media only screen and(max-width: 1024px) {
+  .catalog-big {
+    width:500px;
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .catalog-big {
+    width:456px;
+    height: 280px;
+  }
+  
+  .column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and(max-width: 425px) {
+  .catalog-big {
+    width:500px;
   }
 }
 

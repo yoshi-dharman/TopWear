@@ -5,6 +5,11 @@ $font-montserrat: 'Montserrat', sans-serif;
 
 body{
     font-family: $font-montserrat;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    min-height: 100%;
+    position: relative;
 }
 
 .c-main{
@@ -23,6 +28,10 @@ body{
     background-color: $secondary-color;
 }
 
+.bg-c-secondary-shine{
+    background-color: #E7D7BB;
+}
+
 .c-white{
     color: whitesmoke;
 }
@@ -31,7 +40,61 @@ body{
     background-color: whitesmoke;
 }
 
+.btn-main{
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.btn-main:hover{
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
 .text-decoration-none{
     text-decoration: none;
+}
 
+.border-primary{
+    border: 1px solid $primary-color;
+}
+
+.my-card{
+    width: 60%;
+}
+
+.my-nav li:hover, .my-nav li a:hover{
+    background-color: whitesmoke;
+}
+
+.dropdown-item.active{
+    background-color: whitesmoke;
+}
+
+.my-nav li{
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.my-footer{
+    padding: 2rem 4rem;
+}
+
+p{
+    margin: 0;
+}
+
+.ready-size.active{
+    background-color: $primary-color;
+}
+
+.ready-size{ 
+    padding: 3px;
+    margin: 0px 5px;
+}
+
+.catalog-image-detail{
+    width: auto;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // background-position: center;
 }

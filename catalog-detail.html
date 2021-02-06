@@ -28,11 +28,11 @@
                     <a class="nav-link dropdown-toggle c-secondary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Catalog
                     </a>
-                    <ul class="dropdown-menu bg-c-main" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item c-secondary" href="catalog.html">All Category</a></li>
-                        <li><a class="dropdown-item c-secondary" href="#">Kaos Polos</a></li>
-                        <li><a class="dropdown-item c-secondary" href="#">Kaos Polo</a></li>
-                        <li><a class="dropdown-item c-secondary" href="#">Kemeja</a></li>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                        <li><a onclick="keepVariable('all')" class="dropdown-item c-secondary" href="catalog.html">All Category</a></li>
+                        <li><a onclick="keepVariable('kaos-polos')" class="dropdown-item c-secondary" href="catalog.html">Kaos Polos</a></li>
+                        <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item c-secondary" href="catalog.html">Kaos Polo</a></li>
+                        <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a></li>
                     </ul>
                 </li>
             </ul>
@@ -41,12 +41,11 @@
       </nav>
     
       <div class="container">
-        <div id="catalogID" class="row my-5 justify-content-between">
-          <!-- <div id="catalogTitle" class="col-12 c-secondary fw-bold invisible">ALL CATEGORY / KAOS POLO</div> -->
+        <div id="catalogDetailID" class="row my-5 justify-content-between">
 
-            <div class="col-lg-5 my-5">
+            <!-- <div class="col-lg-5 my-5">
               <div class="catalog-image-detail" style="background-image: url(image/catalog/polo1.jpg);"></div>
-              <!-- <img src="image/catalog/polo1.jpg" alt=""> -->
+
             </div>
             <div class="col-lg-5 my-5">
               <div class="card border-0">
@@ -67,7 +66,7 @@
                   <a href="#" class="btn btn-main my-2 px-4 py-2">Add to Cart</a>
                 </div>
               </div>
-            </div>            
+            </div>             -->
             
         </div>
       </div>
@@ -90,10 +89,10 @@
       </footer>
 
   </div>
-    
-
-
+  
+    <script src="js/route.js"></script>
+    <script type="module" src="js/catalog-detail.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/data-util/data.js"></script>
+    <!-- <script src="js/data-util/data.js"></script> -->
 </body>
 </html>

@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css.map">
-  <link rel="stylesheet" href="css/style.sass">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css.map"> -->
+  <!-- <link rel="stylesheet" href="css/style.sass"> -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/my.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
   <title>Top Wear - Home</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-footer-background">
+  <nav class="navbar navbar-expand-lg navbar-footer-background p-0">
     <div class="container">
       <a class="navbar-brand c-secondary montserrat text-color-inside" href="#">Top Wear</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mb-2 mb-lg-0 my-nav">
           <li class="nav-item">
             <a class="nav-link montserrat text-color-inside" href="#">About</a>
           </li>
@@ -28,10 +29,10 @@
               Catalog
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item montserrat text-color-inside" href="#">All Catalog</a></li>
-              <li><a class="dropdown-item montserrat text-color-inside" href="#">Kaos Polos</a></li>
-              <li><a class="dropdown-item montserrat text-color-inside" href="#">Kaos Polo</a></li>
-              <li><a class="dropdown-item montserrat text-color-inside" href="#">Kemeja</a></li>
+              <li><a onclick="keepVariable('all')" class="dropdown-item montserrat text-color-inside c-secondary" href="catalog.html">All Catalog</a></li>
+              <li><a onclick="keepVariable('kaos-polos')" class="dropdown-item montserrat text-color-inside" href="catalog.html">Kaos Polos</a></li>
+              <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item montserrat text-color-inside" href="catalog.html">Kaos Polo</a></li>
+              <li><a onclick="keepVariable('kemeja')" class="dropdown-item montserrat text-color-inside" href="catalog.html">Kemeja</a></li>
             </ul>
           </li>
         </ul>
@@ -113,8 +114,9 @@
       <span>Email: topwear@gmail.com</span>
     </div>
   </footer>
+  <script src="js/route.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js.map"></script>
+  <!-- <script src="js/bootstrap.bundle.min.js.map"></script> -->
   <script src="js/data-util/data.js"></script>
 </body>
 </html>

@@ -28,11 +28,11 @@
                     <a class="nav-link dropdown-toggle c-secondary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Catalog
                     </a>
-                    <ul class="dropdown-menu bg-c-main" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item c-secondary" href="catalog.html">All Category</a></li>
-                        <li><a class="dropdown-item c-secondary" href="#">Kaos Polos</a></li>
-                        <li><a class="dropdown-item c-secondary" href="#">Kaos Polo</a></li>
-                        <li><a class="dropdown-item c-secondary" href="#">Kemeja</a></li>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                        <li><a onclick="keepVariable('all')" class="dropdown-item c-secondary" href="catalog.html">All Category</a></li>
+                        <li><a onclick="keepVariable('kaos-polos')" class="dropdown-item c-secondary" href="catalog.html">Kaos Polos</a></li>
+                        <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item c-secondary" href="catalog.html">Kaos Polo</a></li>
+                        <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a></li>
                     </ul>
                 </li>
             </ul>
@@ -42,18 +42,18 @@
     
       <div class="container">
         <div id="catalogID" class="row my-5">
-            <div id="catalogTitle" class="col-12 c-secondary fw-bold">ALL CATEGORY / KAOS POLO</div>
+            <div id="catalogTitle" class="col-12 c-secondary fw-bold"></div>
 
-            <div class="col-md-6 col-lg-4 my-5 justify-content-center d-flex">
+            <!-- <div class="col-md-6 col-lg-4 my-5 justify-content-center d-flex">
               <div class="card shadow border-primary my-card">
-                <img src="image/catalog/polo1.jpg" class="card-img-top img-fluid"  alt="...">
+                <img src="image/catalog/kemeja-putih.jpg" class="card-img-top img-fluid"  alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Kaos Polos Putih</h5>
                   <p class="card-text my-2">Rp 89.900</p>
                   <a href="catalog-detail.html" class="btn btn-main w-100">Detail item</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             
         </div>
       </div>
@@ -77,8 +77,9 @@
   </div>
     
 
-
+    <!-- <script src="js/data-util/data.js"></script> -->
+    <script src="js/route.js"></script>
+    <script type="module" src="js/catalog.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/data-util/data.js"></script>
 </body>
 </html>

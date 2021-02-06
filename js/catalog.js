@@ -29,7 +29,7 @@ let display = ()=>{
 
       if(localStorage.categoryItem == item.categoryItem || localStorage.categoryItem == "all"){     
         let card = document.createElement("div");
-        card.setAttribute("class","col-md-4 my-5 justify-content-center d-flex");
+        card.setAttribute("class","col-md-6 col-lg-4 my-5 justify-content-center d-flex");
         card.innerHTML = `
             <div class="card shadow border-primary my-card">
                 <img src="${item.image}" class="card-img-top img-fluid"  alt="...">

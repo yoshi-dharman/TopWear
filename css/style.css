@@ -47,6 +47,13 @@ body {
           justify-content: space-between;
 }
 
+.button {
+  background-color: #CCC477;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .icons img {
   width: 20px;
   height: 20px;

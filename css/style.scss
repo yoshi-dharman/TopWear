@@ -2,7 +2,7 @@ $primary-color: rgb(235,231,196) !important;
 $secondary-color: rgb(147,106,69) !important;
 
 $font-montserrat: 'Montserrat', sans-serif;
-
+$button-color: #CCC477;
 body {
   font-family: $font-montserrat;
 }
@@ -41,6 +41,13 @@ body {
   padding-top: 2.5rem;
   display: flex;
   justify-content: space-between;
+}
+
+.button {
+  background-color: $button-color;
+  border:none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .icons {

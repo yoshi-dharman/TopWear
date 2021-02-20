@@ -9,25 +9,27 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
-  <title>Topwear - Sign in</title>
+  <title>Topwear - Register</title>
 </head>
 <body>
-  <div class="container text-center">
-    <h1 class="text-center">Topwear Register</h1>
-    <div class="d-flex flex-column my-3 align-items-center">
-      <label class="">Name</label>
-      <input type="text" id="name-form" class="rounded w-50">
+  <div class="bg">
+    <div class="container navbar-footer-background rounded-1 pt-1">
+      <h1 class="text-center">Topwear - Register</h1>
+      <div class="d-flex flex-column my-3">
+        <label class="">Name</label>
+        <input type="text" id="name-form" class="rounded">
+      </div>
+      <div class="d-flex flex-column my-3">
+        <label class="">Email</label>
+        <input type="email" id="email-form" class="rounded">
+      </div>
+      <div class="d-flex flex-column my-3">
+        <label class="">Password</label>
+        <input type="password" id="password-form" class="rounded">
+      </div>
+      <button class="mb-3" onclick="login()">Register</button>
+      <a href="/index.html" class="text-color-inside">Login</a>
     </div>
-    <div class="d-flex flex-column my-3 align-items-center">
-      <label class="">Email</label>
-      <input type="email" id="email-form" class="rounded w-50">
-    </div>
-    <div class="d-flex flex-column my-3 align-items-center">
-      <label>Password</label>
-      <input type="password" id="password-form" class="rounded w-50">
-    </div>
-    <button class="me-3" onclick="login()">Register</button>
-    <a href="/index.html">Login</a>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/register.js"></script>

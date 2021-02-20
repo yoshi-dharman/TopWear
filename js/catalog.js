@@ -1,4 +1,4 @@
-import {dataCatalog} from "./data-util/data.js";
+// import {dataCatalog} from "./data-util/data.js";
 
 // console.log(dataCatalog);
 
@@ -13,7 +13,7 @@ if(localStorage.categoryItem == null){
 let catalogID = document.getElementById('catalogID');
 let catalogTitle = document.getElementById('catalogTitle');
 
-let display = ()=>{
+let display = (dataCatalog)=>{
 
     if(localStorage.categoryItem == 'kaos-polo'){
       catalogTitle.innerText = "KAOS POLO";
@@ -46,4 +46,18 @@ let display = ()=>{
     });
 }
 
-display();
+// display();
+
+let url = "https://602f36924410730017c51afd.mockapi.io/katalog/";
+
+const getDataBaju = () => {
+  fetch(url)
+  .then(response => response.json())
+  .then(result => {
+    display(result)
+    // console.log(result)
+  })
+  .catch(error => {console.error('error : ', error)})
+}
+
+getDataBaju();

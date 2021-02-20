@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/my.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Top Wear - Catalog</title>
 </head>
 <body>
@@ -50,19 +51,71 @@
       </nav>
     
       <div class="container">
-        <div id="catalogID" class="row my-5">
+        <div id="cartID" class="row my-5">
+
+            <div id="cartID-1" class="col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3">
+                <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
+                    <div class="cart-image border-primary shadow">
+                        <img class="img-fluid" src="image/catalog/kemeja-putih.jpg" alt="">
+                    </div>
+                    <div class="fw-bold ms-3">
+                        <p class="my-2">Kaos Polos Putih</p>
+                        <p class="my-2">Rp. 89.900</p>
+                    </div>
+                </div>
+                
+                <div class="">
+                    <a href="" onclick="kuranginCart(1,event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
+                    <span id="itembarang-1" class="mx-2">1</span>
+                    <a href="" onclick="tambahinCart(1,event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
+                </div>
+            </div>
+
+            <div id="cartID-2" class="col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3">
+                <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
+                    <div class="cart-image border-primary shadow">
+                        <img class="img-fluid" src="image/catalog/polo1.jpg" alt="">
+                    </div>
+                    <div class="fw-bold ms-3">
+                        <p class="my-2">Kaos Polos Putih</p>
+                        <p class="my-2">Rp. 89.900</p>
+                    </div>
+                </div>
+                
+                <div class="">
+                    <a href="" onclick="kuranginCart(2,event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
+                    <span id="itembarang-2" class="mx-2">1</span>
+                    <a href="" onclick="tambahinCart(2,event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
+                </div>
+            </div>
+
+            
+
+            <hr class="my-4">
+            <div>
+              <table class="table table-borderless">
+                <tr>
+                  <td class="fw-bold">Ongkos Kirim</td>
+                  <td>:</td>
+                  <td>Rp. 10.000</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Pajak 10%</td>
+                  <td>:</td>
+                  <td>Rp. ((Total harga barang + ongkir) * 10%)</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Total Harga</td>
+                  <td>:</td>
+                  <td>(Ongkos kirim + pajak + total harga barang)</td>
+                </tr>
+              </table>
+              <button class="btn btn-main">Bayar ></button>
+            </div>
             <div id="catalogTitle" class="col-12 c-secondary fw-bold"></div>
 
-            <!-- <div class="col-md-6 col-lg-4 my-5 justify-content-center d-flex">
-              <div class="card shadow border-primary my-card">
-                <img src="image/catalog/kemeja-putih.jpg" class="card-img-top img-fluid"  alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Kaos Polos Putih</h5>
-                  <p class="card-text my-2">Rp 89.900</p>
-                  <a href="catalog-detail.html" class="btn btn-main w-100">Detail item</a>
-                </div>
-              </div>
-            </div> -->
+            
+
             
         </div>
       </div>
@@ -86,9 +139,9 @@
   </div>
     
 
-    <!-- <script src="js/data-util/data.js"></script> -->
     <script src="js/route.js"></script>
-    <script type="module" src="js/catalog.js"></script>
+    <script src="js/cart.js"></script>
+    <!-- <script type="module" src="js/catalog.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

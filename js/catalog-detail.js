@@ -55,7 +55,7 @@ const postDataCart = (id,e) =>{
   e.preventDefault()
 
   if(localStorage.isLoggedin != "true"){
-    window.location.replace("landing-page.html");
+    window.location.replace("login.html");
     alert('Anda Belum Login');
   }
   else{
@@ -89,6 +89,7 @@ const postDataCart = (id,e) =>{
       .then(response => {
         response.json()
         on();
+        notifCart();
       })
       // .then(data => console.log(data))
       .catch(error => {console.error('error : ', error)})
@@ -106,7 +107,10 @@ const postDataCart = (id,e) =>{
           quantity : 1
         }),
       })
-      .then(() => on())
+      .then(() => {
+        on();
+        notifCart();
+      })
     }
   })
   .catch(error => {console.error('error : ', error)})

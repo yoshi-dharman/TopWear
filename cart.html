@@ -46,7 +46,7 @@
             <a class="navbar-brand c-secondary text-color-inside py-2" href="index.html">Top Wear</a>
             <ul class="navbar-nav mb-2 mb-lg-0 my-nav">
                 <li class="nav-item">
-                    <a class="nav-link c-secondary" href="about.html">About</a>
+                    <a class="nav-link c-secondary " href="about.html">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle c-secondary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,8 +59,8 @@
                         <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link c-secondary" href="cart.html">Cart</a>
+                <li class="nav-item ">
+                  <a class="nav-link c-secondary d-flex align-items-center" href="cart.html">Cart <span id="totalCart" class="ms-2 badge bg-danger"></span></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link c-secondary" href="cart.html">Hello, User </a>
@@ -96,7 +96,7 @@
             </div>
 
             <hr class="my-4">
-            <div>
+            <div class="col-12 col-lg-5">
               <table class="table table-borderless">
                 <tr>
                   <td class="fw-bold">Ongkos Kirim</td>
@@ -144,6 +144,7 @@
     
 
     <script src="js/route.js"></script>
+    <script src="js/notification.js"></script>
     <script src="js/cart.js"></script>
     <!-- <script type="module" src="js/catalog.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>

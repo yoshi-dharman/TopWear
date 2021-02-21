@@ -3,7 +3,7 @@
 let dataUser;
 
 if(localStorage.isLoggedin != "true"){
-    window.location.replace("landing-page.html");
+    window.location.replace("login.html");
     alert('Anda Belum Login');
 }
 else{
@@ -29,16 +29,21 @@ let deleteData = (id) => {
         method: "DELETE",
         headers: {'Content-Type': 'application/json'},
     })
+    .then(() => {
+        notifCart();
+    })
 }
 
 let kuranginCart = (idKatalog,idCart,e) => {
     e.preventDefault();
     let element = document.getElementById(`itembarang-${idKatalog}`);
     element.innerHTML = parseInt(element.innerText) - 1;
-    updateData(idCart,element.innerText);
     if(element.innerText === "0"){
         document.getElementById(`cartID-${idKatalog}`).remove();
         deleteData(idCart);
+    }
+    else{
+        updateData(idCart,element.innerText);
     }
     calculateHarga();
 

@@ -57,6 +57,11 @@ body {
   border: 1px solid #936a45 !important;
 }
 
+.shadow-main {
+  -webkit-box-shadow: 0 0rem 1rem #ebe7c4 !important;
+          box-shadow: 0 0rem 1rem #ebe7c4 !important;
+}
+
 .my-card {
   width: 60%;
 }

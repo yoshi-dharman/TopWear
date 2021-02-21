@@ -1,5 +1,6 @@
 // import {dataCatalog} from "./data-util/data.js";
 
+let dataUser;
 
 let catalogDetailID = document.getElementById('catalogDetailID');
 let id = localStorage.catalogDetailItem;
@@ -52,7 +53,16 @@ const getDataBajuDetail = (id) => {
 
 const postDataCart = (id,e) =>{
   e.preventDefault()
-  let iniIDUser = 3;  //dummy id user
+
+  if(localStorage.isLoggedin != "true"){
+    window.location.replace("landing-page.html");
+    alert('Anda Belum Login');
+  }
+  else{
+      dataUser = JSON.parse(localStorage.user);
+  }
+
+  let iniIDUser = dataUser.id;  //dummy id user
   // check ada datanya blm GET
 
   let urlcart = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/cart/";
@@ -60,14 +70,17 @@ const postDataCart = (id,e) =>{
   .then(response => response.json())
   .then(data => {
 
-    let targetData = data.filter((item)=>{
-      return item.idKatalog == id;
-    })
+    let targetData = "";
+    if(data != "Not found"){
+      targetData = data.filter((item)=>{
+        return item.idKatalog == id;
+      })
+    }
 
     if(targetData != ""){
       //ada barang
       //update
-
+      
       fetch(urlcart+targetData[0].id,{
         method: "PUT",
         headers: {'Content-Type': 'application/json'},

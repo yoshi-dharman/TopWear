@@ -1,37 +1,56 @@
 
 // console.log(JSON.parse(localStorage.user).id);
+let dataUser;
 
 if(localStorage.isLoggedin != "true"){
     window.location.replace("landing-page.html");
     alert('Anda Belum Login');
 }
 else{
-    let dataUser = JSON.parse(localStorage.user);
+    dataUser = JSON.parse(localStorage.user);
 }
 
-let updateData = () => {    //update Data quantity cart
+let updateData = (id,num) => {    //update Data quantity cart
+    let iniIDUser = dataUser.id;
 
+    let urlcartID = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/cart/"+id;
+    fetch(urlcartID,{
+        method: "PUT",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({quantity : parseInt(num)}),
+    })
 }
 
-let kuranginCart = (id,e) => {
+let deleteData = (id) => {
+    let iniIDUser = dataUser.id;
+
+    let urlcartID = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/cart/"+id;
+    fetch(urlcartID,{
+        method: "DELETE",
+        headers: {'Content-Type': 'application/json'},
+    })
+}
+
+let kuranginCart = (idKatalog,idCart,e) => {
     e.preventDefault();
-    let element = document.getElementById(`itembarang-${id}`);
+    let element = document.getElementById(`itembarang-${idKatalog}`);
     element.innerHTML = parseInt(element.innerText) - 1;
+    updateData(idCart,element.innerText);
     if(element.innerText === "0"){
-        document.getElementById(`cartID-${id}`).remove();
+        document.getElementById(`cartID-${idKatalog}`).remove();
+        deleteData(idCart);
     }
     calculateHarga();
 
-
 }
 
-let tambahinCart = (id,e) => {
+let tambahinCart = (idKatalog,idCart,e) => {
     e.preventDefault();
-    let element = document.getElementById(`itembarang-${id}`);
+    let element = document.getElementById(`itembarang-${idKatalog}`);
     element.innerHTML = parseInt(element.innerText) + 1;
+    updateData(idCart,element.innerText);
     calculateHarga();
-
-
+    
 }
 
 const displayEmptyCart = () => {
@@ -49,12 +68,12 @@ const display = (result) => {
 
     //ambil data baju di katalog
     result.forEach(item => {
-        let urlKatalog = "https://602f36924410730017c51afd.mockapi.io/katalog/"+item.id;
+        let urlKatalog = "https://602f36924410730017c51afd.mockapi.io/katalog/"+item.idKatalog;
         fetch(urlKatalog)
         .then(response => response.json())
         .then(result => {
             let cartData = document.createElement("div");
-            cartData.setAttribute("id","cartID-"+item.id);
+            cartData.setAttribute("id","cartID-"+item.idKatalog);
             cartData.setAttribute("class","col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3");
             cartData.innerHTML = `
                 <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
@@ -68,9 +87,9 @@ const display = (result) => {
                 </div>
                 
                 <div class="">
-                    <a href="" onclick="kuranginCart(${result.id},event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
+                    <a href="" onclick="kuranginCart(${result.id},${item.id},event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
                     <span data="quantity" id="itembarang-${result.id}" class="mx-2">${item.quantity}</span>
-                    <a href="" onclick="tambahinCart(${result.id},event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
+                    <a href="" onclick="tambahinCart(${result.id},${item.id},event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
                 </div>
             `;
             parentID.appendChild(cartData);
@@ -129,4 +148,8 @@ const calculateHarga = () =>{
         })
     }
 
+}
+
+function on(){
+    document.getElementById("modalAlert").click();
 }

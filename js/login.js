@@ -1,8 +1,9 @@
-const login = () => {
+const login = (e) => {
+  e.preventDefault();
   let emailInputSignin = document.getElementById("email-form").value;
   let passwordInputSignin = document.getElementById("password-form").value;
 
-  if(emailInputSignin === "" || passwordInputSignin === "") {
+  if (emailInputSignin === "" || passwordInputSignin === "") {
     alert("Please input your data")
   } else {
     const api = "https://602f36924410730017c51afd.mockapi.io/user"
@@ -10,13 +11,13 @@ const login = () => {
       .then((response) => response.json())
       .then((result) => {
         const user = result.find((user) => user.email === emailInputSignin && user.password === passwordInputSignin)
-        let {password, ...userData} = user
+        let { password, ...userData } = user
 
-        if(user) {
+        if (user) {
           localStorage.setItem("user", JSON.stringify(userData))
           localStorage.setItem("isLoggedin", true)
           alert("Login berhasil")
-          window.location.href = "landing-page.html"
+          window.location.href = "index.html"
         } else {
           alert("Email dan password anda belum terdaftar")
         }

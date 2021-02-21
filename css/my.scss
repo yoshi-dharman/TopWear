@@ -58,11 +58,15 @@ body{
     border: 1px solid $primary-color;
 }
 
+.border-secondary{
+    border: 1px solid $secondary-color;
+}
+
 .my-card{
     width: 60%;
 }
 
-.my-nav li:hover, .my-nav li a:hover{
+.my-nav li:hover:not(.antiHover), .my-nav li a:hover{
     background-color: whitesmoke;
 }
 

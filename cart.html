@@ -44,16 +44,15 @@
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light bg-c-main p-0">
         <div class="container">
-          <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-            aria-label="Toggle navigation">
+          <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-between " id="navbarTogglerDemo01">
             <a class="navbar-brand c-secondary text-color-inside py-2" href="index.html">Top Wear</a>
             <ul class="navbar-nav mb-2 mb-lg-0 my-nav">
               <li class="nav-item">
-                <a class="nav-link c-secondary " href="about.html">About</a>
+                <a class="nav-link c-secondary" href="about.html">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle c-secondary" href="#" id="navbarDropdownMenuLink" role="button"
@@ -67,8 +66,8 @@
                       Polos</a></li>
                   <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item c-secondary" href="catalog.html">Kaos
                       Polo</a></li>
-                  <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary"
-                      href="catalog.html">Kemeja</a></li>
+                  <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item ">
@@ -80,8 +79,9 @@
               </li>
               <li class="nav-item antiHover">
                 <!-- <a class="nav-link c-secondary btn border border-secondary rounded">Sign out</a> -->
-                <a id="signBtn" class="nav-link c-secondary btn btn-main border border-secondary rounded">Sign out</a>
+                <a id="signBtn" class="nav-link c-secondary btn btn-main border border-secondary rounded" onclick="logout()">Sign out</a>
               </li>
+              <!-- <button>Sign out</button> -->
             </ul>
           </div>
         </div>
@@ -160,6 +160,7 @@
   <script src="js/route.js"></script>
   <script src="js/notification.js"></script>
   <script src="js/cart.js"></script>
+  <script src="/js/logout.js"></script>
   <!-- <script type="module" src="js/catalog.js"></script> -->
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
     <title>Top Wear - Catalog</title>
@@ -47,38 +48,46 @@
 
   <div class="d-flex flex-column justify-content-between h-100">
     <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-c-main p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light bg-c-main p-0">
         <div class="container">
-          <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-between " id="navbarTogglerDemo01">
             <a class="navbar-brand c-secondary text-color-inside py-2" href="index.html">Top Wear</a>
             <ul class="navbar-nav mb-2 mb-lg-0 my-nav">
-                <li class="nav-item">
-                    <a class="nav-link c-secondary" href="about.html">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle c-secondary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Catalog
-                    </a>
-                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-                        <li><a onclick="keepVariable('all')" class="dropdown-item c-secondary" href="catalog.html">All Category</a></li>
-                        <li><a onclick="keepVariable('kaos-polos')" class="dropdown-item c-secondary" href="catalog.html">Kaos Polos</a></li>
-                        <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item c-secondary" href="catalog.html">Kaos Polo</a></li>
-                        <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link c-secondary d-flex align-items-center" href="cart.html">Cart <span id="totalCart" class="ms-2 badge bg-danger"></span></a>
-                </li>
-                <li class="nav-item antiHover">
-                  <span id="userNick" class="nav-link c-secondary">User</span>
-                </li>
-                <li class="nav-item antiHover">
-                  <!-- <a class="nav-link c-secondary btn border border-secondary rounded">Sign out</a> -->
-                  <a id="signBtn" class="nav-link c-secondary btn btn-main border border-secondary rounded">Sign out</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link c-secondary" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle c-secondary" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Catalog
+                </a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                  <li><a onclick="keepVariable('all')" class="dropdown-item c-secondary" href="catalog.html">All
+                      Category</a></li>
+                  <li><a onclick="keepVariable('kaos-polos')" class="dropdown-item c-secondary" href="catalog.html">Kaos
+                      Polos</a></li>
+                  <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item c-secondary" href="catalog.html">Kaos
+                      Polo</a></li>
+                  <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link c-secondary d-flex align-items-center" href="cart.html">Cart <span id="totalCart"
+                    class="ms-2 badge bg-danger"></span></a>
+              </li>
+              <li class="nav-item antiHover">
+                <span id="userNick" class="nav-link c-secondary">User</span>
+              </li>
+              <li class="nav-item antiHover">
+                <!-- <a class="nav-link c-secondary btn border border-secondary rounded">Sign out</a> -->
+                <a id="signBtn" class="nav-link c-secondary btn btn-main border border-secondary rounded" onclick="logout()">Sign out</a>
+              </li>
+              <!-- <button>Sign out</button> -->
             </ul>
           </div>
         </div>
@@ -115,29 +124,28 @@
         </div>
       </div>
     </div>
-
-      <footer class="d-flex justify-content-between align-items-center bg-c-main my-footer">
-        <div class="">
-          <h3 class="c-secondary">TOPWEAR</h3>
-          <div class="icons pb-3">
-            <img width="25px" src="image/icons/instagram.png" alt="">
-            <img width="25px" src="image/icons/twitter.png" alt="">
-          </div>
-          <span>Copyright 2021, PT. Denrenyos Bersatu</span>
+    <footer class="container-fluid navbar-footer-background mt-4">
+      <div class="footer-left">
+        <h1 class="text-color-inside">TOPWEAR</h1>
+        <div class="icons pb-3">
+          <img src="./image/icons/instagram.png" alt="">
+          <img src="./image/icons/twitter.png" alt="">
         </div>
-        <div class="">
-          <p>Alamat: Jalan bunga mawar, No. 16 Jakarta</p>
-          <p>No. Telp. / WA: 081122334455</p>
-          <p>Email: topwear@gmail.com</p>
-        </div>
-      </footer>
-
+        <span>Copyright 2021, PT. Denrenyos Bersatu</span>
+      </div>
+      <div class="footer-right">
+        <span>Alamat: Jalan bunga mawar, No. 16 Jakarta</span>
+        <span>No. Telp. / WA: 081122334455</span>
+        <span>Email: topwear@gmail.com</span>
+      </div>
+    </footer>
   </div>
   
     <script src="js/route.js"></script>
     <script src="js/notification.js"></script>
     <script src="js/catalog-detail.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/logout.js"></script>
     <!-- <script src="js/data-util/data.js"></script> -->
 </body>
 </html>

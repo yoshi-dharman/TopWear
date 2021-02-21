@@ -1,4 +1,4 @@
-const login = async() => {
+const register = async() => {
   let emailInputRegister = document.getElementById("email-form").value;
   let nameInputRegister = document.getElementById("name-form").value;
   let passwordInputRegister = document.getElementById("password-form").value;
@@ -22,6 +22,6 @@ const login = async() => {
     })
     const result = await response.json()
     alert("Registrasi berhasil, silahkan login")
-    window.location.href = "/index.html"
+    window.location.href = "/login.html"
   }
 }

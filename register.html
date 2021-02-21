@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/my.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
-  <title>Topwear - Register</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Topwear - Register</title>
+  </head>
 <body>
-  <div class="bg">
-    <div class="container h-50 navbar-footer-background rounded-1 pt-1">
-      <h4 class="text-center pt-5 pb-3">Topwear - Register</h4>
-      <div class="d-flex flex-column my-3">
-        <label class="">Name</label>
-        <input type="text" id="name-form" class="rounded">
+  <div class="container">
+    <div class="row mt-5 d-flex justify-content-center">
+      <div class="col-12 col-lg-6">
+        <h4 class="text-center mb-5 mt-5">Topwear - Register</h4>
+        <div class="p-4 border-primary shadow rounded">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name-form" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email-form" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password-form">
+          </div>
+          <div class="mt-4 mb-3">
+            <button onclick="register()" type="button" class="btn btn-main">Register</button>
+            <span> or </span>
+            <a href="login.html" class="form-check-label c-secondary" for="exampleCheck1">Login</a>
+          </div>
+        </div>
       </div>
-      <div class="d-flex flex-column my-3">
-        <label class="">Email</label>
-        <input type="email" id="email-form" class="rounded">
-      </div>
-      <div class="d-flex flex-column my-3">
-        <label class="">Password</label>
-        <input type="password" id="password-form" class="rounded">
-      </div>
-      <button class="mb-3" onclick="login()">Register</button>
-      <a href="/index.html" class="text-color-inside">Login</a>
     </div>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>

@@ -16,7 +16,7 @@ const login = () => {
           localStorage.setItem("user", JSON.stringify(userData))
           localStorage.setItem("isLoggedin", true)
           alert("Login berhasil")
-          window.location.href = "/landing-page.html"
+          window.location.href = "landing-page.html"
         } else {
           alert("Email dan password anda belum terdaftar")
         }

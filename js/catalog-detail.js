@@ -52,21 +52,48 @@ const getDataBajuDetail = (id) => {
 
 const postDataCart = (id,e) =>{
   e.preventDefault()
-  let iniIDUser = 1;
+  let iniIDUser = 3;  //dummy id user
+  // check ada datanya blm GET
+
   let urlcart = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/cart/";
   fetch(urlcart)
   .then(response => response.json())
   .then(data => {
-    console.log(data);
-    let dataSama = data.filter((item)=>{
+
+    let targetData = data.filter((item)=>{
       return item.idKatalog == id;
     })
-    console.log(dataSama);
-    if(dataSama != ""){
-      console.log("ada barang");
+
+    if(targetData != ""){
+      //ada barang
+      //update
+
+      fetch(urlcart+targetData[0].id,{
+        method: "PUT",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({quantity : targetData[0].quantity + 1}),
+      })
+      .then(response => {
+        response.json()
+        on();
+      })
+      // .then(data => console.log(data))
+      .catch(error => {console.error('error : ', error)})
     }
     else{
-      console.log("kosong");
+      //barang kosong
+      //post baru
+
+      fetch(urlcart,{
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          userId : iniIDUser,
+          idKatalog : id,
+          quantity : 1
+        }),
+      })
+      .then(() => on())
     }
   })
   .catch(error => {console.error('error : ', error)})
@@ -78,9 +105,10 @@ const postDataCart = (id,e) =>{
 getDataBajuDetail(id);
 
 function on() {
-  document.getElementById("overlay").style.display = "block";
+  document.getElementById("modalAlert").click();
+  // document.getElementById("overlay").style.display = "block";
 }
 
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
+// function off() {
+//   document.getElementById("overlay").style.display = "none";
+// }

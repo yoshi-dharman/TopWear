@@ -12,16 +12,34 @@
 </head>
 <body>
 
-  <div id="overlay" onclick="off()">
+  <!-- <div id="overlay" onclick="off()">
     <div class="toast-container position-absolute p-3 top-0 start-50 translate-middle-x mt-5" id="toastPlacement">
       <div class="toast showing show w-auto">
         <div class="toast-header bg-c-main c-secondary">
-          <!-- <img src="..." class="rounded me-2" alt="..."> -->
           <strong class="me-auto w-auto pe-5">Produk Berhasil Ditambahkan ke Keranjang</strong>
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <!-- <div class="toast-body">
-          Hello, world! This is a toast message.
+      </div>
+    </div>
+  </div> -->
+
+  <button id="modalAlert" type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-c-main c-secondary">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Produk Berhasil Ditambahkan ke Keranjang</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- <div class="modal-body">
+          ...
+        </div> -->
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div> -->
       </div>
     </div>

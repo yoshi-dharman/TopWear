@@ -51,45 +51,26 @@
       </nav>
     
       <div class="container">
-        <div id="cartID" class="row my-5">
-
-            <div id="cartID-1" class="col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3">
-                <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
-                    <div class="cart-image border-primary shadow">
-                        <img class="img-fluid" src="image/catalog/kemeja-putih.jpg" alt="">
-                    </div>
-                    <div class="fw-bold ms-3">
-                        <p class="my-2">Kaos Polos Putih</p>
-                        <p class="my-2">Rp. 89.900</p>
-                    </div>
-                </div>
-                
-                <div class="">
-                    <a href="" onclick="kuranginCart(1,event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
-                    <span id="itembarang-1" class="mx-2">1</span>
-                    <a href="" onclick="tambahinCart(1,event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
-                </div>
+        <div class="row my-5">
+            <div id="cartID" class="col-12">
+                <!-- <div id="cartID-1" class="col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3">
+                  <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
+                      <div class="cart-image border-primary shadow">
+                          <img class="img-fluid" src="image/catalog/kemeja-putih.jpg" alt="">
+                      </div>
+                      <div class="fw-bold ms-3">
+                          <p class="my-2">Kaos Polos Putih</p>
+                          <p class="my-2">Rp. 89.900</p>
+                      </div>
+                  </div>
+                  
+                  <div class="">
+                      <a href="" onclick="kuranginCart(1,event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
+                      <span id="itembarang-1" class="mx-2">1</span>
+                      <a href="" onclick="tambahinCart(1,event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
+                  </div>
+              </div> -->
             </div>
-
-            <div id="cartID-2" class="col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3">
-                <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
-                    <div class="cart-image border-primary shadow">
-                        <img class="img-fluid" src="image/catalog/polo1.jpg" alt="">
-                    </div>
-                    <div class="fw-bold ms-3">
-                        <p class="my-2">Kaos Polos Putih</p>
-                        <p class="my-2">Rp. 89.900</p>
-                    </div>
-                </div>
-                
-                <div class="">
-                    <a href="" onclick="kuranginCart(2,event)" class="text-decoration-none link-dark"><i class="bi bi-dash-circle fs-4"></i></a>
-                    <span id="itembarang-2" class="mx-2">1</span>
-                    <a href="" onclick="tambahinCart(2,event)" class="text-decoration-none link-dark"><i class="bi bi-plus-circle fs-4"></i></a>
-                </div>
-            </div>
-
-            
 
             <hr class="my-4">
             <div>
@@ -102,12 +83,12 @@
                 <tr>
                   <td class="fw-bold">Pajak 10%</td>
                   <td>:</td>
-                  <td>Rp. ((Total harga barang + ongkir) * 10%)</td>
+                  <td id="pajakHarga">Rp. ((Total harga barang + ongkir) * 10%)</td>
                 </tr>
                 <tr>
                   <td class="fw-bold">Total Harga</td>
                   <td>:</td>
-                  <td>(Ongkos kirim + pajak + total harga barang)</td>
+                  <td id="totalHarga">Rp. (Ongkos kirim + pajak + total harga barang)</td>
                 </tr>
               </table>
               <button class="btn btn-main">Bayar ></button>

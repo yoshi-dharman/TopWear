@@ -91,6 +91,13 @@ body {
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .catalog-big {
+    width: 65%;
+    height: 280px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .container-fluid {
     padding-left: 2.5rem;
@@ -139,6 +146,12 @@ body {
   }
   .footer-right {
     padding-top: 1rem;
+  }
+  .catalog {
+    width: 100%
+  }
+  .catalog-big {
+    width: 100%
   }
 }
 /*# sourceMappingURL=style.css.map */

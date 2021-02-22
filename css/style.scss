@@ -24,6 +24,14 @@ body {
   }
 }
 
+.catalog-width {
+  width: 65%;
+}
+
+.object-cover{
+  object-fit: cover;
+}
+
 .catalog {
   width: 65%;
   height: 280px;

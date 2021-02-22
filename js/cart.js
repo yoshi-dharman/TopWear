@@ -1,6 +1,7 @@
 
 // console.log(JSON.parse(localStorage.user).id);
 let dataUser;
+let cartID= [];
 
 if(localStorage.isLoggedin != "true"){
     window.location.replace("login.html");
@@ -77,6 +78,7 @@ const display = (result) => {
         fetch(urlKatalog)
         .then(response => response.json())
         .then(result => {
+            cartID.push(item.id);
             let cartData = document.createElement("div");
             cartData.setAttribute("id","cartID-"+item.idKatalog);
             cartData.setAttribute("class","col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3");
@@ -161,5 +163,19 @@ const calculateHarga = () =>{
 }
 
 function on(){
-    document.getElementById("modalAlert").click();
+
+    if(cartID == ""){
+        alert("Tidak ada cart");
+    }
+    else{
+        cartID.forEach(item => {
+            deleteData(item)
+        })
+        document.getElementById("modalAlert").click();
+    
+        setTimeout(function(){ window.location.href = "./index.html"},5000);
+    }
+    
+
+    
 }

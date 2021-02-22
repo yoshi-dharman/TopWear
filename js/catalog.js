@@ -31,7 +31,7 @@ let display = (dataCatalog)=>{
         let card = document.createElement("div");
         card.setAttribute("class","col-md-6 col-lg-4 my-5 justify-content-center d-flex");
         card.innerHTML = `
-            <div class="card shadow border-primary my-card">
+            <div class="card border-1 border shadow my-card">
                 <img src="${item.image}" class="card-img-top img-fluid"  alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${item.nama}</h5>

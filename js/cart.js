@@ -84,7 +84,7 @@ const display = (result) => {
             cartData.setAttribute("class","col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3");
             cartData.innerHTML = `
                 <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
-                    <div class="cart-image border-primary shadow">
+                    <div class="cart-image border-1 border shadow">
                         <img class="img-fluid" src="${result.image}" alt="">
                     </div>
                     <div class="fw-bold ms-3">

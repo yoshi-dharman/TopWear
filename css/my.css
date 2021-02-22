@@ -49,7 +49,7 @@ body {
 }
 
 .border-primary {
-  border: 1px solid #ebe7c4 !important;
+  border: 1px solid #222 !important;
 }
 
 .border-secondary {
@@ -86,7 +86,7 @@ p {
 }
 
 .ready-size.active {
-  background-color: #222 !important;
+  background-color: #ebe7c4 !important;
 }
 
 .ready-size {

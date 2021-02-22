@@ -130,10 +130,12 @@ const calculateHarga = () =>{
     let dataPrice = document.querySelectorAll('[data="price"]');
     let dataQuantity = document.querySelectorAll('[data="quantity"]');
 
+    let totalBarang = document.getElementById("totalBarang");
     let pajakHarga = document.getElementById("pajakHarga"); 
     let totalHarga = document.getElementById("totalHarga");
 
     if(dataPrice.length == 0){
+        totalBarang.innerHTML = 0;
         pajakHarga.innerHTML = `Rp. 0`;
         totalHarga.innerHTML = `Rp. 0`;
         displayEmptyCart();
@@ -141,13 +143,16 @@ const calculateHarga = () =>{
     else{
 
         let total = 0;
+        let quantity = 0;
         dataPrice.forEach((item, index) => {
             var numberPattern = /\d+/g;
 
             // console.log(item.innerHTML.match(numberPattern));
             item = parseInt(item.innerHTML.match(numberPattern).join(""));
             total += item * dataQuantity[index].innerText;
-            
+            quantity += parseInt(dataQuantity[index].innerText);
+
+            totalBarang.innerHTML = quantity;
             pajakHarga.innerHTML = `Rp. ${(total*10/100).toLocaleString().replaceAll(",", ".")}`;
             totalHarga.innerHTML = `Rp. ${(total+10000+(total*10/100)).toLocaleString().replaceAll(",", ".")}`;
         })

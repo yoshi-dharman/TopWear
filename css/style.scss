@@ -1,5 +1,8 @@
-$primary-color: rgb(235,231,196) !important;
-$secondary-color: rgb(147,106,69) !important;
+$primary-color: #222 !important;
+$secondary-color: rgb(235,231,196)!important;
+
+// $primary-color: rgb(235,231,196) !important;
+// $secondary-color: rgb(147,106,69) !important;
 
 $font-montserrat: 'Montserrat', sans-serif;
 $button-color: #CCC477;
@@ -9,6 +12,7 @@ body {
 
 .navbar-footer-background {
   background-color: $primary-color;
+  color: $secondary-color;
 }
 
 .text-color-inside {

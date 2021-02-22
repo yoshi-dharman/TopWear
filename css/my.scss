@@ -1,5 +1,8 @@
-$primary-color: rgb(235,231,196) !important;
-$secondary-color: rgb(147,106,69) !important;
+$primary-color: #222 !important;
+$secondary-color: rgb(235,231,196)!important;
+
+// $primary-color: rgb(235,231,196) !important;
+// $secondary-color: rgb(147,106,69) !important;
 
 $font-montserrat: 'Montserrat', sans-serif;
 
@@ -46,8 +49,8 @@ body{
 }
 
 .btn-main:hover{
-    background-color: $secondary-color;
-    color: $primary-color;
+    background-color: gray !important;
+    // color: $secondary-color;
 }
 
 .text-decoration-none{
@@ -55,7 +58,7 @@ body{
 }
 
 .border-primary{
-    border: 1px solid $primary-color;
+    border: 1px solid $secondary-color;
 }
 
 .border-secondary{
@@ -71,11 +74,11 @@ body{
 }
 
 .my-nav li:hover:not(.antiHover), .my-nav li a:hover{
-    background-color: whitesmoke;
+    background-color: gray;
 }
 
 .dropdown-item.active{
-    background-color: whitesmoke;
+    background-color: gray;
 }
 
 .my-nav li{

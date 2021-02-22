@@ -8,19 +8,19 @@ body {
 }
 
 .c-main {
-  color: #ebe7c4 !important;
+  color: #222 !important;
 }
 
 .bg-c-main {
-  background-color: #ebe7c4 !important;
+  background-color: #222 !important;
 }
 
 .c-secondary {
-  color: #936a45 !important;
+  color: #ebe7c4 !important;
 }
 
 .bg-c-secondary {
-  background-color: #936a45 !important;
+  background-color: #ebe7c4 !important;
 }
 
 .bg-c-secondary-shine {
@@ -36,13 +36,12 @@ body {
 }
 
 .btn-main {
-  background-color: #ebe7c4 !important;
-  color: #936a45 !important;
+  background-color: #222 !important;
+  color: #ebe7c4 !important;
 }
 
 .btn-main:hover {
-  background-color: #936a45 !important;
-  color: #ebe7c4 !important;
+  background-color: gray !important;
 }
 
 .text-decoration-none {
@@ -54,7 +53,7 @@ body {
 }
 
 .border-secondary {
-  border: 1px solid #936a45 !important;
+  border: 1px solid #ebe7c4 !important;
 }
 
 .shadow-main {
@@ -67,11 +66,11 @@ body {
 }
 
 .my-nav li:hover:not(.antiHover), .my-nav li a:hover {
-  background-color: whitesmoke;
+  background-color: gray;
 }
 
 .dropdown-item.active {
-  background-color: whitesmoke;
+  background-color: gray;
 }
 
 .my-nav li {
@@ -87,7 +86,7 @@ p {
 }
 
 .ready-size.active {
-  background-color: #ebe7c4 !important;
+  background-color: #222 !important;
 }
 
 .ready-size {

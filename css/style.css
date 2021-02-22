@@ -3,11 +3,12 @@ body {
 }
 
 .navbar-footer-background {
-  background-color: #ebe7c4 !important;
+  background-color: #222 !important;
+  color: #ebe7c4 !important;
 }
 
 .text-color-inside {
-  color: #936a45 !important;
+  color: #ebe7c4 !important;
 }
 
 .catalog-big {

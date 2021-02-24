@@ -11,11 +11,12 @@ else{
     dataUser = JSON.parse(localStorage.user);
 }
 
-let updateData = (id,num) => {    //update Data quantity cart
+let updateData = async (id,num) => {    //update Data quantity cart
     let iniIDUser = dataUser.id;
 
     let urlcartID = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/cart/"+id;
-    fetch(urlcartID,{
+
+    let data = await fetch(urlcartID,{
         method: "PUT",
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({quantity : parseInt(num)}),

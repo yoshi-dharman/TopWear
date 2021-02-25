@@ -28,8 +28,7 @@
     ],
     "image": [
       "image/catalog/kaos-polos-hitam1.jpg",
-      "image/catalog/kaos-polos-hitam2.jpg",
-      "image/catalog/kaos-polos-hitam3.jpg"
+      "image/catalog/kaos-polos-hitam2.jpg"
     ],
     "description": "Kaos polos berbahan premium, yang sedang tren masa kini. Tentunya bahan sangat nyaman, dan adem dikenakan untuk teman-teman, terutama yang sangat suka beraktifitas di outdoor, sangat mudah menyerap keringat. Makin kece dan keren, dan siap untuk hangout bersama teman-teman deh!"
   },
@@ -45,8 +44,7 @@
     ],
     "image": [
       "image/catalog/kaos-polos-merah1.jpg",
-      "image/catalog/kaos-polos-merah2.jpg",
-      "image/catalog/kaos-polos-merah3.jpg"
+      "image/catalog/kaos-polos-merah2.jpg"
     ],
     "description": "Kaos polos berbahan premium, yang sedang tren masa kini. Tentunya bahan sangat nyaman, dan adem dikenakan untuk teman-teman, terutama yang sangat suka beraktifitas di outdoor, sangat mudah menyerap keringat. Makin kece dan keren, dan siap untuk hangout bersama teman-teman deh!"
   },
@@ -61,8 +59,7 @@
     ],
     "image": [
       "image/catalog/kaos-polo-putih1.jpg",
-      "image/catalog/kaos-polo-putih2.jpg",
-      "image/catalog/kaos-polo-putih3.jpg"
+      "image/catalog/kaos-polo-putih2.jpg"
     ],
     "description": "Kaos polo berbahan premium, yang sedang tren masa kini. Tentunya bahan sangat nyaman, dan adem dikenakan untuk teman-teman, terutama yang sangat suka beraktifitas di outdoor, sangat mudah menyerap keringat. Makin kece dan keren, dan siap untuk hangout bersama teman-teman deh!"
   },
@@ -77,8 +74,7 @@
     ],
     "image": [
       "image/catalog/kaos-polo-hitam1.jpg",
-      "image/catalog/kaos-polo-hitam2.jpg",
-      "image/catalog/kaos-polo-hitam3.jpg"
+      "image/catalog/kaos-polo-hitam2.jpg"
     ],
     "description": "Kaos polo berbahan premium, yang sedang tren masa kini. Tentunya bahan sangat nyaman, dan adem dikenakan untuk teman-teman, terutama yang sangat suka beraktifitas di outdoor, sangat mudah menyerap keringat. Makin kece dan keren, dan siap untuk hangout bersama teman-teman deh!"
   },
@@ -93,8 +89,7 @@
     ],
     "image": [
       "image/catalog/kaos-polo-merah1.jpg",
-      "image/catalog/kaos-polo-merah2.jpg",
-      "image/catalog/kaos-polo-merah3.jpg"
+      "image/catalog/kaos-polo-merah2.jpg"
     ],
     "description": "Kaos polo berbahan premium, yang sedang tren masa kini. Tentunya bahan sangat nyaman, dan adem dikenakan untuk teman-teman, terutama yang sangat suka beraktifitas di outdoor, sangat mudah menyerap keringat. Makin kece dan keren, dan siap untuk hangout bersama teman-teman deh!"
   },

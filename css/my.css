@@ -126,4 +126,13 @@ p {
   cursor: pointer;
   /* Add a pointer on hover */
 }
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.hover-cursor-pointer:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=my.css.map */

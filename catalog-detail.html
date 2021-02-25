@@ -28,9 +28,13 @@
     Launch demo modal
   </button>
 
+  <button id="modalGallery" type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#galleryModal">
+    Launch demo modal
+  </button>
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content shadow-main border-0 c-secondary">
+      <div class="modal-content border-0 c-secondary">
         <div class="modal-header rounded c-main">
           <h5 class="modal-title" id="exampleModalLabel">Produk Berhasil Ditambahkan ke Keranjang</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -38,6 +42,60 @@
         <!-- <div class="modal-body">
           ...
         </div> -->
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 c-secondary">
+        <div class="modal-header rounded c-main">
+          <h5 class="modal-title" id="galleryModalLabel">
+            <div class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="galleryModalBody" class="modal-body">
+          <div class="text-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image/catalog/kemeja-putih1.jpg" class="img-fluid d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="image/catalog/kemeja-putih2.jpg" class="img-fluid d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="image/catalog/kemeja-putih3.jpg" class="img-fluid d-block w-100" alt="...">
+              </div>
+            </div>
+            <div class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+              <div class="bg-dark p-2 rounded-circle d-flex">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Previous</span>
+            </div>
+            <div class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+              <div class="bg-dark p-2 rounded-circle d-flex">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Next</span>
+            </div>
+          </div> -->
+
+        </div>
         <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
@@ -66,13 +124,13 @@
                   Catalog
                 </a>
                 <ul class="dropdown-menu bg-c-main" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a onclick="keepVariable('all')" class="dropdown-item c-secondary" href="catalog.html">All
+                  <li onclick="keepVariable('all')"><a class="dropdown-item c-secondary" href="catalog.html">All
                       Category</a></li>
-                  <li><a onclick="keepVariable('kaos-polos')" class="dropdown-item c-secondary" href="catalog.html">Kaos
+                  <li onclick="keepVariable('kaos-polos')"><a  class="dropdown-item c-secondary" href="catalog.html">Kaos
                       Polos</a></li>
-                  <li><a onclick="keepVariable('kaos-polo')" class="dropdown-item c-secondary" href="catalog.html">Kaos
+                  <li onclick="keepVariable('kaos-polo')"><a  class="dropdown-item c-secondary" href="catalog.html">Kaos
                       Polo</a></li>
-                  <li><a onclick="keepVariable('kemeja')" class="dropdown-item c-secondary" href="catalog.html">Kemeja</a>
+                  <li onclick="keepVariable('kemeja')"><a  class="dropdown-item c-secondary" href="catalog.html">Kemeja</a>
                   </li>
                 </ul>
               </li>
@@ -96,15 +154,31 @@
       <div class="container">
         <div id="catalogDetailID" class="row my-5 justify-content-between">
 
-            <!-- <div class="col-lg-5 my-5">
-              <div class="catalog-image-detail" style="background-image: url(image/catalog/polo1.jpg);"></div>
-
+            <!-- <div class="col-lg-5 my-lg-5">
+              <div class="">
+                <div class="border rounded-3">
+                  <img id="imgMain" src="image/catalog/kemeja-putih1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="mt-2 d-flex row-cols-6 w-auto justify-content-between">
+                  <div onclick="changeImgMain(1)" class="">
+                    <img id="img-1" src="image/catalog/kemeja-putih1.jpg" class="img-fluid object-contain border border-primary rounded-3" alt="">
+                  </div>
+                  <div onclick="changeImgMain(2)" class="">
+                    <img id="img-2" src="image/catalog/kemeja-putih2.jpg" class="img-fluid object-contain rounded-3" alt="">
+                  </div>
+                  <div onclick="changeImgMain(3)" class="">
+                    <img id="img-3" src="image/catalog/kemeja-putih3.jpg" class="img-fluid object-contain rounded-3" alt="">
+                  </div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-5 my-5">
+            <div class="col-lg-5 my-lg-5">
               <div class="card border-0">
                 <div class="card-body">
-                  <h5 class="card-title fw-bold my-2">Kaos Polos Putih</h5>
-                  <h5 class="card-title my-1"><span class="fw-bold">Size Ready: </span> 
+                  <h5 class="card-title fw-bold my-2">Kaos Putih Polos</h5>
+                  <h5 class="card-title my-1"><span class="fw-bold">Size Ready: </span>
                     <span class="ready-size active">S</span>
                     <span class="ready-size">M</span>
                     <span class="ready-size">L</span>

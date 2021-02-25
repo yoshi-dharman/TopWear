@@ -85,8 +85,8 @@ const display = (result) => {
             cartData.setAttribute("class","col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3");
             cartData.innerHTML = `
                 <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
-                    <div class="cart-image border-1 border shadow">
-                        <img class="img-fluid" src="${result.image}" alt="">
+                    <div onclick="openGallery(${result.id})" class="cart-image border-1 border shadow hover-cursor-pointer">
+                        <img class="img-fluid" src="${result.image[0]}" alt="">
                     </div>
                     <div class="fw-bold ms-3">
                         <p class="my-2">${result.nama}</p>
@@ -179,4 +179,49 @@ function on(){
     
 
     
+}
+
+let openGallery = (idKatalog) => {
+    document.getElementById("modalGallery").click();
+
+    let urlKatalog = "https://602f36924410730017c51afd.mockapi.io/katalog/"+idKatalog;
+    fetch(urlKatalog)
+    .then(response => response.json())
+    .then(dataCatalog => {
+        
+        document.getElementById("galleryModalLabel").innerHTML = dataCatalog.nama;
+
+        let galleryModal = document.getElementById("galleryModalBody");
+
+        galleryModal.innerHTML = `
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="${dataCatalog.image[0]}" class="img-fluid d-block w-100" alt="...">
+              </div>
+              ${dataCatalog.image[1] ? `<div class="carousel-item"><img src="${dataCatalog.image[1]}" class="img-fluid d-block w-100" alt="..."></div>`
+              : `` }
+              ${dataCatalog.image[2] ? `<div class="carousel-item"><img src="${dataCatalog.image[2]}" class="img-fluid d-block w-100" alt="..."></div>`
+              : `` }
+              ${dataCatalog.image[3] ? `<div class="carousel-item"><img src="${dataCatalog.image[3]}" class="img-fluid d-block w-100" alt="..."></div>`
+              : `` }
+              ${dataCatalog.image[4] ? `<div class="carousel-item"><img src="${dataCatalog.image[4]}" class="img-fluid d-block w-100" alt="..."></div>`
+              : `` }
+            </div>
+            <div class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+              <div class="bg-dark p-2 rounded-circle d-flex">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Previous</span>
+            </div>
+            <div class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+              <div class="bg-dark p-2 rounded-circle d-flex">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Next</span>
+            </div>
+          </div>
+    `
+
+    })
 }

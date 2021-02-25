@@ -32,7 +32,7 @@ let display = (dataCatalog)=>{
         card.setAttribute("class","col-md-6 col-lg-4 my-5 justify-content-center d-flex");
         card.innerHTML = `
             <div class="card border-1 border shadow my-card">
-                <img src="${item.image}" class="card-img-top img-fluid"  alt="...">
+                <img src="${item.image[0]}" class="card-img-top img-fluid"  alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${item.nama}</h5>
                   <p class="card-text my-2">Rp ${item.price}</p>

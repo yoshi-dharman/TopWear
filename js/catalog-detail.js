@@ -42,7 +42,11 @@ let display = (dataCatalog)=>{
                 ${dataCatalog.size.includes("XL") ? '<span class="ready-size active">XL</span>' : '<span class="ready-size">XL</span>'}
               
               </h5>
-              <p class="card-text my-2">Rp. ${dataCatalog.price}</p>
+              <p class="card-text my-2">Rp ${dataCatalog.diskon > 0 
+                ? `<strike class="text-muted">${dataCatalog.price}</strike> 
+                    ${(parseInt(dataCatalog.price.match(/\d+/g).join("")) - parseInt(dataCatalog.price.match(/\d+/g).join("")) * dataCatalog.diskon / 100).toLocaleString().replaceAll(",", ".")} 
+                    <span class="badge bg-danger">${dataCatalog.diskon}%</span>`
+                : `${dataCatalog.price}`} </p>
               <h5 class="card-title fw-bold my-2">Descripstion: </h5>
               <p class="card-text my-2">${dataCatalog.description}</p>
               <a href="" onclick="postDataCart(${dataCatalog.id},event)" class="btn btn-main my-2 px-4 py-2">Add to Cart</a>

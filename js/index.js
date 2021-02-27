@@ -1,37 +1,14 @@
-// import {dataCatalog} from "./data-util/data.js";
-
-// console.log(dataCatalog);
-
-
-if(localStorage.categoryItem == null){
-  localStorage.categoryItem = "all";
-}
-// console.log(localStorage.categoryItem);
-// delete localStorage.categoryItem;
-
-
-let catalogID = document.getElementById('catalogID');
-let catalogTitle = document.getElementById('catalogTitle');
+let diskonID = document.getElementById('diskonID');
 
 let display = (dataCatalog)=>{
 
-    if(localStorage.categoryItem == 'kaos-polo'){
-      catalogTitle.innerText = "KAOS POLO";
-    } else if(localStorage.categoryItem == 'kaos-polos'){
-      catalogTitle.innerText = "KAOS POLOS";
-    } else if(localStorage.categoryItem == 'kemeja'){
-      catalogTitle.innerText = "KEMEJA";
-    } else{
-      catalogTitle.innerText = "ALL CATEGORY";
-    }
-
     dataCatalog.forEach(item =>{
 
-      if(localStorage.categoryItem == item.categoryItem || localStorage.categoryItem == "all"){     
+      if(item.diskon > 0){     
         let card = document.createElement("div");
-        card.setAttribute("class","col-md-6 col-lg-4 my-5 justify-content-center d-flex");
+        card.setAttribute("class"," col-6 col-md-3 col-lg-2 my-5 justify-content-center d-flex");
         card.innerHTML = `
-            <div class="card border-1 border shadow my-card">
+            <div class="card border-1 border shadow ">
                 <img src="${item.image[0]}" class="card-img-top img-fluid"  alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${item.nama}</h5>
@@ -44,13 +21,12 @@ let display = (dataCatalog)=>{
                 </div>
             </div>
         `;
-        catalogID.appendChild(card);
+        diskonID.appendChild(card);
       }
 
     });
 }
 
-// display();
 
 let url = "https://602f36924410730017c51afd.mockapi.io/katalog/";
 

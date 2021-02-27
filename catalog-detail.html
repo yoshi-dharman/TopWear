@@ -138,12 +138,21 @@
                 <a class="nav-link c-secondary d-flex align-items-center" href="cart.html">Cart <span id="totalCart"
                     class="ms-2 badge bg-danger"></span></a>
               </li>
-              <li class="nav-item antiHover">
+              <!-- <li class="nav-item antiHover">
                 <span id="userNick" class="nav-link c-secondary">User</span>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle c-secondary" href="#" id="userNick" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    User
+                  </a>
+                  <ul class="dropdown-menu bg-c-main" aria-labelledby="userNick">
+                    <li><a class="dropdown-item c-secondary" href="history.html">History Pembelian</a></li>
+                  </ul>
               </li>
               <li class="nav-item antiHover">
                 <!-- <a class="nav-link c-secondary btn border border-secondary rounded">Sign out</a> -->
-                <a id="signBtn" class="nav-link c-secondary btn btn-main border border-secondary rounded" onclick="logout()">Sign out</a>
+                <a id="signBtn" class="ms-lg-2 nav-link c-secondary btn btn-main border border-secondary rounded" onclick="logout()">Sign out</a>
               </li>
               <!-- <button>Sign out</button> -->
             </ul>

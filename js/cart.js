@@ -1,7 +1,6 @@
 
 // console.log(JSON.parse(localStorage.user).id);
 let dataUser;
-let cartID= [];
 
 if(localStorage.isLoggedin != "true"){
     window.location.replace("login.html");
@@ -23,7 +22,7 @@ let updateData = async (id,num) => {    //update Data quantity cart
     })
 }
 
-let deleteData = (id) => {
+let deleteData = (id,history) => {
     let iniIDUser = dataUser.id;
 
     let urlcartID = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/cart/"+id;
@@ -33,6 +32,21 @@ let deleteData = (id) => {
     })
     .then(() => {
         notifCart();
+        if(history){
+            // console.log(history);
+            // console.log(history.katalogID);
+            // console.log(history.quantity);
+            let urlUser = "https://602f36924410730017c51afd.mockapi.io/user/"+iniIDUser+"/history";
+            fetch(urlUser,{
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    idKatalog : history.katalogID,
+                    quantity : history.quantity
+                })
+            })
+
+        }
     })
 }
 
@@ -41,8 +55,8 @@ let kuranginCart = (idKatalog,idCart,e) => {
     let element = document.getElementById(`itembarang-${idKatalog}`);
     element.innerHTML = parseInt(element.innerText) - 1;
     if(element.innerText === "0"){
-        document.getElementById(`cartID-${idKatalog}`).remove();
-        deleteData(idCart);
+        document.getElementById(`cartID-${idCart}`).remove();
+        deleteData(idCart,false);
     }
     else{
         updateData(idCart,element.innerText);
@@ -79,9 +93,9 @@ const display = (result) => {
         fetch(urlKatalog)
         .then(response => response.json())
         .then(result => {
-            cartID.push(item.id);
             let cartData = document.createElement("div");
-            cartData.setAttribute("id","cartID-"+item.idKatalog);
+            cartData.setAttribute("id","cartID-"+item.id);
+            cartData.setAttribute("idKatalog","katalogID-"+item.idKatalog);
             cartData.setAttribute("class","col-12 d-flex justify-content-lg-between justify-content-around align-items-center mb-3");
             cartData.innerHTML = `
                 <div class="cart-detail d-lg-flex text-center text-lg-start align-items-center">
@@ -90,7 +104,11 @@ const display = (result) => {
                     </div>
                     <div class="fw-bold ms-3">
                         <p class="my-2">${result.nama}</p>
-                        <p data="price" class="my-2">Rp. ${result.price}</p>
+                        <p class="my-2">Rp ${result.diskon > 0 
+                            ? `<strike class="text-muted">${result.price}</strike> <span data="price">
+                                ${(parseInt(result.price.match(/\d+/g).join("")) - parseInt(result.price.match(/\d+/g).join("")) * result.diskon / 100).toLocaleString().replaceAll(",", ".")} 
+                                </span><span class="badge bg-danger">${result.diskon}%</span>`
+                            : `<span data="price">${result.price}</span>`} </p>
                     </div>
                 </div>
                 
@@ -147,11 +165,13 @@ const calculateHarga = () =>{
 
         let total = 0;
         let quantity = 0;
+
         dataPrice.forEach((item, index) => {
             var numberPattern = /\d+/g;
 
             // console.log(item.innerHTML.match(numberPattern));
-            item = parseInt(item.innerHTML.match(numberPattern).join(""));
+            // console.log(item.innerHTML);
+            item = parseInt(item.innerText.match(numberPattern).join(""));
             total += item * dataQuantity[index].innerText;
             quantity += parseInt(dataQuantity[index].innerText);
 
@@ -164,13 +184,23 @@ const calculateHarga = () =>{
 }
 
 function on(){
+    let cartID = document.querySelectorAll('[id^="cartID-"]');
+    // let katalogID = document.querySelectorAll('[idKatalog^="katalogID-"]');
 
-    if(cartID == ""){
+    if(cartID.length <= 0){
         alert("Tidak ada cart");
     }
     else{
+
         cartID.forEach(item => {
-            deleteData(item)
+            let id = parseInt(item.id.match(/\d+/g));
+            let katalogID = parseInt(item.getAttribute("idKatalog").match(/\d+/g));
+            let quantity = document.getElementById("itembarang-"+katalogID).innerText;
+
+            // console.log(id +" and "+ katalogID);
+            
+            deleteData(id,{"katalogID" : katalogID, "quantity" : quantity});
+            document.getElementById(`cartID-`+id).remove();
         })
         document.getElementById("modalAlert").click();
     

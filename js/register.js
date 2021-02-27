@@ -22,6 +22,6 @@ const register = async() => {
     })
     const result = await response.json()
     alert("Registrasi berhasil, silahkan login")
-    window.location.href = "/login.html"
+    window.location.href = "./login.html"
   }
 }

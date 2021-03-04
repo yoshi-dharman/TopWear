@@ -1,0 +1,32 @@
+.bg-promo {
+  position:fixed;
+  background-color: gray;
+  opacity: 70%;
+  width: 100%;
+  z-index: 50;
+  height: 100vh;
+}
+
+.modal-promo {
+  background-color: black;
+  z-index:80;
+  margin:auto;
+  width: 800px;
+  height: 400px;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.modal-promo img {
+  width: 800px;
+  height:400px;
+  position: absolute;
+}
+
+.button-close {
+  top:0;
+  position: absolute;
+}

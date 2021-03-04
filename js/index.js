@@ -41,3 +41,11 @@ const getDataBaju = () => {
 }
 
 getDataBaju();
+
+const close = document.getElementById("close-button")
+
+close.addEventListener("click", closeButton);
+function closeButton() {
+  document.getElementById("container").remove()
+  document.getElementById("modal-container").remove()
+}
